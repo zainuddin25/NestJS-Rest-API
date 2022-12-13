@@ -56,7 +56,9 @@ export class UsersController {
 
     const jwt = await this.jwtService.signAsync(
       {
-        id: user.id
+        id: user.id,
+        username: user.username,
+        email: user.email
       }
     )
 
